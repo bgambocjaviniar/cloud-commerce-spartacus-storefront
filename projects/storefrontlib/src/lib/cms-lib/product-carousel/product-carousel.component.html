@@ -33,7 +33,7 @@
                   | cxTranslateUrl
               "
             >
-              {{ product | json }}
+              {{ product.images | json }}
               <cx-picture
                 [imageContainer]="product.images?.PRIMARY"
                 imageFormat="product"
