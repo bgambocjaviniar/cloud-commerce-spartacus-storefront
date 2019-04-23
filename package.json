@@ -9,6 +9,7 @@
     "build": "ng build storefrontapp --prod",
     "build:core:lib": "ng build core && ng build storefrontlib && yarn generate:translations",
     "build:qa": "ng build -c=qa",
+    "build-all": "yarn build:core:lib && ng build storefrontapp -c=ci --base-href 'https://sap.github.io/cloud-commerce-spartacus-storefront/'",
     "e2e": "ng e2e",
     "e2e:no-serve": "ng e2e --devServerTarget=",
     "e2e:ci": "ng e2e --configuration=ci --protractor-config=projects/storefrontapp-e2e/protractor.headless.conf.js",
