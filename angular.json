@@ -23,11 +23,7 @@
               "projects/storefrontapp/src/assets",
               "projects/storefrontapp/src/manifest.json",
               "projects/storefrontapp/src/webApplicationInjector.js",
-              {
-                "glob": "_redirects",
-                "input": "src",
-                "output": "/"
-              }
+              "projects/storefrontapp/src/_redirects"
             ],
             "styles": ["projects/storefrontapp/src/styles.scss"],
             "stylePreprocessorOptions": {
