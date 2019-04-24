@@ -8,4 +8,4 @@ yarn build:core:lib
 
 echo "-----"
 echo "Building SPA app"
-ng build storefrontapp -c=ci --base-href "https://sap.github.io/cloud-commerce-spartacus-storefront/"
+ng build storefrontapp -c=ci
