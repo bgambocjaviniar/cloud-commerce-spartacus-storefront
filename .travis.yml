@@ -16,9 +16,17 @@ branches:
 script: ./build.sh sonar
 deploy:
   provider: firebase
-  skip_cleanup: true
   token:
     secure: 'gOd5CRUvj78hi9aqpjy/fc58HmVon+80oX3OrlhxgCy/wQR6GucyfZFJQ7wZ6WGmOcRyD6VYfnZoa+3Er2RarbAMUmMvNImqYbbO3F4K/K4s5bxt4u+lfLJjlXCONEZWuKrimI13BeTmbojK9BpfERRJO+KgztGL9eYDy22gVd1Qsbn4TWKzzJpBtEp3cjm/2CFMIw6XLyUD0jz0vzeXAtpX8DxxDfK0hssV9alKwBgCPMW7udjDWSxRKXVjs2n8undetBMTMzPoBNKBbCMGBvPQniZbXDYfEmzfafTJMYfcNuIJ332v91X+ZTy/ke9h4lCam0kVEehxnM1Lv8B7o5ZZco9Rzo7nvOR4AM1uEfP5L+Bo8Qu62fXKKvwtBaYQakYZgdH5IJMDvCmH/FGyoFNp5+LVRIXn/4TEzYWC0nfrr72oF52KbF4XhwhHlvksFK1RuDtkX42ECLlrJ2tT58enYxbS8TtrjTWX38RpCxexoGKAZrvO4FAImonr930ty1/wl2a0GEkhqw5qYZq8HpxDaRiP6aVgxuiFKzMfEHlNCSb7PGJIoEjgcJr/Yyv4nmJuGflyI1H2vXdKeAva2+72S9IecMC6j9IafGSi2cJL6xHVsV4ouTrz/StKSZ7+MBnih0C0RVVdp8pXmBD7/ksFLLPiYh7xs7LJvxmmtBw='
+  on:
+    branches:
+      only:
+        - develop
+        - master
+        - "/^feature\\/.*$/"
+        - "/^hotfix\\/.*$/"
+        - "/^release\\/.*$/"
+        - "/^doc\\/.*$/"
 notifications:
   email:
     on_failure: always
