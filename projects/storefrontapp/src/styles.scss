@@ -1,3 +1,81 @@
 // Spartacus Application styles
 
 @import 'storefrontstyles/index';
+
+/* You can add global styles to this file, and also import other style files */
+// To modify global variables put them inside this root
+:root {
+  --cx-g-color-primary: #3a5da2;
+}
+
+// Main color of my custom component
+$siemens-green: #3a5da2;
+
+// Updating the header
+header {
+  --cx-background-color: #fff;
+  --cx-color: #788791;
+
+  cx-page-slot {
+    --cx-border-top: 0px;
+  }
+}
+
+a:hover {
+  --cx-color: $siemens-green;
+}
+
+// Updating the mini-cart
+cx-mini-cart {
+  a {
+    --cx-color: #fff;
+    --cx-background: #3a5da2;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+// Updating the searchbox
+cx-searchbox {
+  --cx-color: #788791;
+  form {
+    border: 1px solid rgba(120, 135, 145, 0.4);
+    margin-top: 1px;
+    border-radius: 2px;
+  }
+  .cx-icon {
+    --cx-fill: #788791;
+  }
+}
+
+cx-hamburger-menu {
+  .hamburger-inner {
+    background-color: #788791;
+
+    &::before,
+    &::after {
+      background-color: #788791;
+    }
+  }
+}
+
+// Updating the navigation
+cx-category-navigation {
+  nav {
+    --cx-padding: 0.6rem 0 0 0;
+    margin-bottom: -15px;
+
+    cx-navigation-ui {
+      .cx-nav-link {
+        transition: 0.2s ease-in;
+
+        &:hover {
+          --cx-color: #788791;
+          border-bottom: 4px solid $siemens-green;
+        }
+      }
+    }
+  }
+}
