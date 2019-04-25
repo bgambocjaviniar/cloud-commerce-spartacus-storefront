@@ -8,11 +8,7 @@
     active: service.getActiveItem() | async
   } as carousel"
 >
-  <div
-    class="cx-carousel"
-    [ngClass]="'size-' + carousel.maxItemSize"
-    style="background-color:black"
-  >
+  <div class="cx-carousel" [ngClass]="'size-' + carousel.maxItemSize">
     <button
       class="previous"
       (click)="service.setPreviousItemAsActive()"
